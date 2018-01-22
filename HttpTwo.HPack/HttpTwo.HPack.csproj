@@ -1,47 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C75A83BB-7EF1-4CDB-8C52-9E6E3E11341D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>HttpTwo.HPack</RootNamespace>
-    <AssemblyName>HttpTwo.HPack</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworks>netstandard1.6;netstandard2.0;net45;net46</TargetFrameworks>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>sgyy</Authors>
+    <Company />
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/sgyy/HttpTwo</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/sgyy/HttpTwo/master/HttpTwo-Icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/sgyy/HttpTwo.git</RepositoryUrl>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.6|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.6\HttpTwo.HPack.xml</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.6|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.6\HttpTwo.HPack.xml</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HuffmanEncoder.cs" />
-    <Compile Include="Decoder.cs" />
-    <Compile Include="DynamicTable.cs" />
-    <Compile Include="Encoder.cs" />
-    <Compile Include="HeaderField.cs" />
-    <Compile Include="HPackUtil.cs" />
-    <Compile Include="Huffman.cs" />
-    <Compile Include="HuffmanDecoder.cs" />
-    <Compile Include="StaticTable.cs" />
-    <Compile Include="HeaderDelegate.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>

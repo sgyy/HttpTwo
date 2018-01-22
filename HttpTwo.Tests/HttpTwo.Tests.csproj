@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -7,7 +7,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>HttpTwo.Tests</RootNamespace>
     <AssemblyName>HttpTwo.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,18 +43,16 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\HttpTwo\HttpTwo.csproj">
-      <Project>{DC2F25D9-75BE-4C67-B41D-84B738A16B9F}</Project>
-      <Name>HttpTwo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HttpTwo.HPack\HttpTwo.HPack.csproj">
-      <Project>{C75A83BB-7EF1-4CDB-8C52-9E6E3E11341D}</Project>
+      <Project>{7ea17e06-a3a6-494c-a59d-135a86eea98e}</Project>
       <Name>HttpTwo.HPack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HttpTwo\HttpTwo.csproj">
+      <Project>{d404c0c1-320e-41d6-b402-ebdde32f0c29}</Project>
+      <Name>HttpTwo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

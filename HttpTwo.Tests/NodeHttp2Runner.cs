@@ -19,8 +19,10 @@ namespace HttpTwo.Tests
             // HTTP2_PLAIN=true HTTP2_LOG=trace HTTP2_LOG_DATA=1 node ./example/server.js
             var scriptPath = Path.Combine (AppDomain.CurrentDomain.BaseDirectory, "..", "..", "node-http2", "example", "server.js");
 
-            process = new Process ();
-            process.StartInfo = new ProcessStartInfo ("node", "\"" + scriptPath + "\"");
+            process = new Process
+            {
+                StartInfo = new ProcessStartInfo("node", "\"" + scriptPath + "\"")
+            };
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.EnvironmentVariables.Add ("HTTP2_PLAIN", "true");
@@ -34,12 +36,10 @@ namespace HttpTwo.Tests
 
 
             process.ErrorDataReceived += (sender, e) => {
-                if (LogHandler != null)
-                    LogHandler (e.Data);
+                LogHandler?.Invoke(e.Data);
             };
             process.OutputDataReceived += (sender, e) => {
-                if (LogHandler != null)
-                    LogHandler (e.Data);
+                LogHandler?.Invoke(e.Data);
             };
 
             Log.Info ("Running: {0} {1}", process.StartInfo.FileName, process.StartInfo.Arguments);
