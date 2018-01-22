@@ -2,21 +2,22 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.6;netstandard2.0;net45;net46</TargetFrameworks>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>sgyy</Authors>
     <Company />
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/sgyy/HttpTwo</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/sgyy/HttpTwo/master/HttpTwo-Icon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/sgyy/HttpTwo.git</RepositoryUrl>
+    <PackageTags>HttpTwo HPack</PackageTags>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.6|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard1.6\HttpTwo.HPack.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\HttpTwo.HPack.xml</DocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.6|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.6\HttpTwo.HPack.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\HttpTwo.HPack.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

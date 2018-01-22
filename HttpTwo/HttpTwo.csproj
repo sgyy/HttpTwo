@@ -13,19 +13,16 @@
     <PackageTags>HttpTwo</PackageTags>
     <ApplicationIcon />
     <Win32Resource />
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\HttpTwo.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|nyCPU'">
+    <DocumentationFile>bin\Debug\HttpTwo.xml</DocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.0\HttpTwo.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\HttpTwo.xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\HttpTwo.HPack\HttpTwo.HPack.csproj" />
-  </ItemGroup>
 
   <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
     <PackageReference Include="System.Runtime" Version="4.3.0" />
@@ -41,6 +38,10 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <Reference Include="System" />
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HttpTwo.HPack" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

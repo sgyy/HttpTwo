@@ -43,10 +43,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\HttpTwo.HPack\HttpTwo.HPack.csproj">
-      <Project>{7ea17e06-a3a6-494c-a59d-135a86eea98e}</Project>
-      <Name>HttpTwo.HPack</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HttpTwo\HttpTwo.csproj">
       <Project>{d404c0c1-320e-41d6-b402-ebdde32f0c29}</Project>
       <Name>HttpTwo</Name>
